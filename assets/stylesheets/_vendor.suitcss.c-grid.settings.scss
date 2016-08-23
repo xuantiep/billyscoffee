@@ -1,0 +1,20 @@
+
+
+// --------------------------------------------------------------------------
+//    SUIT GRID SETTINGS
+// --------------------------------------------------------------------------
+
+
+$gutterSpace: space(2);
+
+.Grid--withGutter {
+	margin: 0 -#{$gutterSpace / 3};
+
+    @include media-breakpoint-up(lg) { margin: 0 -#{$gutterSpace}; }
+}
+
+.Grid--withGutter > .Grid-cell {
+	padding: 0 $gutterSpace / 3;
+
+    @include media-breakpoint-up(lg) { padding: 0 $gutterSpace; }
+}
