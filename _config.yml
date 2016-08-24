@@ -34,10 +34,16 @@ sass:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - gulpfile.js
   - package.json
+  - node_modules
   - README.md
   - CNAME
-  - node_modules
+  - assets/fonts
+  - assets/fonts-subset
+  - assets/icons
+  - assets/images-src
+  - assets/javascripts
 
 # Plugin settings
 gems:

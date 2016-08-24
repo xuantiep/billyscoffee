@@ -39,7 +39,8 @@ var options = {
 	},
 
 	build : {
-		tasks       : [ 'images', 'compile:sass', 'minify:js'],
+		// tasks       : [ 'images', 'compile:sass', 'minify:js'],
+		tasks       : [ 'images', 'compile:sass'],
 		destination : 'build/'
 	},
 
