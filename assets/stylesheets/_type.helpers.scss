@@ -27,6 +27,8 @@
 	}
 }
 
+//.c-text-block--reverse { @include reverseTextBlock(); }
+
 @mixin centerTextBlock {
 	h1,
 	p,
@@ -35,28 +37,34 @@
 	}
 }
 
-.Text-block--center { @include centerTextBlock(); }
+//.c-text-block--center { @include centerTextBlock(); }
 
 @mixin headerTextBlock {
 	h1 { margin-bottom: space(0.2); }
 	p  { margin-bottom: space(0.35); }
 }
 
+//.c-text-block--header { @include headerTextBlock(); }
+
 
 // Base spacer rules?
 // p + h2 { margin-top: $space * 1.75; }
 
-// A note on mixin parameters.
-// Required parameters must preced optional parameters.
-// To use parameter 4, you must have a value for each
-// preceding required parameter. Or list the parameter
-// value after it's key name (like below).
-// @mixin textSm() {
-// 	@include textTemplate(
-// 		Text--sm,
-// 		$mixinLetterSpacing: 0.01em
-// 	);
-// }
+.u-pSpace {
+    //margin-top:
+}
+
+//p + cite { margin-top: space(1); }
+h2 + h3  { margin-top: space(0.2); }
+h3 + p   { margin-top: space(0.4); }
+
+
+
+
+
+
+
+
 
 
 

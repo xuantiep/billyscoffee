@@ -208,121 +208,123 @@
 // At media-queries.
 // --------------------------------------------------------------------------
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-	@include media-breakpoint-up($breakpoint) {
-		[class*="u-#{$breakpoint}-size"] {
-		  flex-basis: auto !important;
-		}
+@if ($suit-size-breakpoints == true) {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+    	@include media-breakpoint-up($breakpoint) {
+    		[class*="u-#{$breakpoint}-size"] {
+    		  flex-basis: auto !important;
+    		}
 
-		.u-#{$breakpoint}-size1of12 {
-		  width: calc(100% * 1 / 12) !important;
-		}
+    		.u-#{$breakpoint}-size1of12 {
+    		  width: calc(100% * 1 / 12) !important;
+    		}
 
-		.u-#{$breakpoint}-size1of10 {
-		  width: 10% !important;
-		}
+    		.u-#{$breakpoint}-size1of10 {
+    		  width: 10% !important;
+    		}
 
-		.u-#{$breakpoint}-size1of8 {
-		  width: 12.5% !important;
-		}
+    		.u-#{$breakpoint}-size1of8 {
+    		  width: 12.5% !important;
+    		}
 
-		.u-#{$breakpoint}-size1of6,
-		.u-#{$breakpoint}-size2of12 {
-		  width: calc(100% * 1 / 6) !important;
-		}
+    		.u-#{$breakpoint}-size1of6,
+    		.u-#{$breakpoint}-size2of12 {
+    		  width: calc(100% * 1 / 6) !important;
+    		}
 
-		.u-#{$breakpoint}-size1of5,
-		.u-#{$breakpoint}-size2of10 {
-		  width: 20% !important;
-		}
+    		.u-#{$breakpoint}-size1of5,
+    		.u-#{$breakpoint}-size2of10 {
+    		  width: 20% !important;
+    		}
 
-		.u-#{$breakpoint}-size1of4,
-		.u-#{$breakpoint}-size2of8,
-		.u-#{$breakpoint}-size3of12 {
-		  width: 25% !important;
-		}
+    		.u-#{$breakpoint}-size1of4,
+    		.u-#{$breakpoint}-size2of8,
+    		.u-#{$breakpoint}-size3of12 {
+    		  width: 25% !important;
+    		}
 
-		.u-#{$breakpoint}-size3of10 {
-		  width: 30% !important;
-		}
+    		.u-#{$breakpoint}-size3of10 {
+    		  width: 30% !important;
+    		}
 
-		.u-#{$breakpoint}-size1of3,
-		.u-#{$breakpoint}-size2of6,
-		.u-#{$breakpoint}-size4of12 {
-		  width: calc(100% * 1 / 3) !important;
-		}
+    		.u-#{$breakpoint}-size1of3,
+    		.u-#{$breakpoint}-size2of6,
+    		.u-#{$breakpoint}-size4of12 {
+    		  width: calc(100% * 1 / 3) !important;
+    		}
 
-		.u-#{$breakpoint}-size3of8 {
-		  width: 37.5% !important;
-		}
+    		.u-#{$breakpoint}-size3of8 {
+    		  width: 37.5% !important;
+    		}
 
-		.u-#{$breakpoint}-size2of5,
-		.u-#{$breakpoint}-size4of10 {
-		  width: 40% !important;
-		}
+    		.u-#{$breakpoint}-size2of5,
+    		.u-#{$breakpoint}-size4of10 {
+    		  width: 40% !important;
+    		}
 
-		.u-#{$breakpoint}-size5of12 {
-		  width: calc(100% * 5 / 12) !important;
-		}
+    		.u-#{$breakpoint}-size5of12 {
+    		  width: calc(100% * 5 / 12) !important;
+    		}
 
-		.u-#{$breakpoint}-size1of2,
-		.u-#{$breakpoint}-size2of4,
-		.u-#{$breakpoint}-size3of6,
-		.u-#{$breakpoint}-size4of8,
-		.u-#{$breakpoint}-size5of10,
-		.u-#{$breakpoint}-size6of12 {
-		  width: 50% !important;
-		}
+    		.u-#{$breakpoint}-size1of2,
+    		.u-#{$breakpoint}-size2of4,
+    		.u-#{$breakpoint}-size3of6,
+    		.u-#{$breakpoint}-size4of8,
+    		.u-#{$breakpoint}-size5of10,
+    		.u-#{$breakpoint}-size6of12 {
+    		  width: 50% !important;
+    		}
 
-		.u-#{$breakpoint}-size7of12 {
-		  width: calc(100% * 7 / 12) !important;
-		}
+    		.u-#{$breakpoint}-size7of12 {
+    		  width: calc(100% * 7 / 12) !important;
+    		}
 
-		.u-#{$breakpoint}-size3of5,
-		.u-#{$breakpoint}-size6of10 {
-		  width: 60% !important;
-		}
+    		.u-#{$breakpoint}-size3of5,
+    		.u-#{$breakpoint}-size6of10 {
+    		  width: 60% !important;
+    		}
 
-		.u-#{$breakpoint}-size5of8 {
-		  width: 62.5% !important;
-		}
+    		.u-#{$breakpoint}-size5of8 {
+    		  width: 62.5% !important;
+    		}
 
-		.u-#{$breakpoint}-size2of3,
-		.u-#{$breakpoint}-size4of6,
-		.u-#{$breakpoint}-size8of12 {
-		  width: calc(100% * 2 / 3) !important;
-		}
+    		.u-#{$breakpoint}-size2of3,
+    		.u-#{$breakpoint}-size4of6,
+    		.u-#{$breakpoint}-size8of12 {
+    		  width: calc(100% * 2 / 3) !important;
+    		}
 
-		.u-#{$breakpoint}-size7of10 {
-		  width: 70% !important;
-		}
+    		.u-#{$breakpoint}-size7of10 {
+    		  width: 70% !important;
+    		}
 
-		.u-#{$breakpoint}-size3of4,
-		.u-#{$breakpoint}-size6of8,
-		.u-#{$breakpoint}-size9of12 {
-		  width: 75% !important;
-		}
+    		.u-#{$breakpoint}-size3of4,
+    		.u-#{$breakpoint}-size6of8,
+    		.u-#{$breakpoint}-size9of12 {
+    		  width: 75% !important;
+    		}
 
-		.u-#{$breakpoint}-size4of5,
-		.u-#{$breakpoint}-size8of10 {
-		  width: 80% !important;
-		}
+    		.u-#{$breakpoint}-size4of5,
+    		.u-#{$breakpoint}-size8of10 {
+    		  width: 80% !important;
+    		}
 
-		.u-#{$breakpoint}-size5of6,
-		.u-#{$breakpoint}-size10of12 {
-		  width: calc(100% * 5 / 6) !important;
-		}
+    		.u-#{$breakpoint}-size5of6,
+    		.u-#{$breakpoint}-size10of12 {
+    		  width: calc(100% * 5 / 6) !important;
+    		}
 
-		.u-#{$breakpoint}-size7of8 {
-		  width: 87.5% !important;
-		}
+    		.u-#{$breakpoint}-size7of8 {
+    		  width: 87.5% !important;
+    		}
 
-		.u-#{$breakpoint}-size9of10 {
-		  width: 90% !important;
-		}
+    		.u-#{$breakpoint}-size9of10 {
+    		  width: 90% !important;
+    		}
 
-		.u-#{$breakpoint}-size11of12 {
-		  width: calc(100% * 11 / 12) !important;
-		}
-	}
+    		.u-#{$breakpoint}-size11of12 {
+    		  width: calc(100% * 11 / 12) !important;
+    		}
+    	}
+    }
 }

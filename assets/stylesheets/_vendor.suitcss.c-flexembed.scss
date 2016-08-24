@@ -94,11 +94,13 @@
 // At media-queries.
 // --------------------------------------------------------------------------
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-	@include media-breakpoint-up($breakpoint) {
-		.#{$breakpoint}-FlexEmbed-ratio--3by1 { padding-bottom: calc(100% / 3); }
-		.#{$breakpoint}-FlexEmbed-ratio--2by1 { padding-bottom: 50%; }
-		.#{$breakpoint}-FlexEmbed-ratio--16by9 { padding-bottom: 56.25%; }
-		.#{$breakpoint}-FlexEmbed-ratio--4by3 { padding-bottom: 75%; }
-	}
+@if ($suit-flexembed-breakpoints == true) {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+    	@include media-breakpoint-up($breakpoint) {
+    		.#{$breakpoint}-FlexEmbed-ratio--3by1 { padding-bottom: calc(100% / 3); }
+    		.#{$breakpoint}-FlexEmbed-ratio--2by1 { padding-bottom: 50%; }
+    		.#{$breakpoint}-FlexEmbed-ratio--16by9 { padding-bottom: 56.25%; }
+    		.#{$breakpoint}-FlexEmbed-ratio--4by3 { padding-bottom: 75%; }
+    	}
+    }
 }

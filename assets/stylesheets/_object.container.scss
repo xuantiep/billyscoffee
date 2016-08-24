@@ -12,7 +12,7 @@
 	height: inherit;
 	margin: 0 auto;
 	max-width: $width;
-	padding: 0 space(1);
+	padding: 0 space(1.5);
 	position: relative;
 
 	p,
@@ -46,10 +46,10 @@
     &--super {
         //@include container( container-width(su) );
 		max-width: 100%;
-		padding: 0 #{$gutterSpace * 2};
+		padding: 0 space(1.5);
 
         @include media-breakpoint-up(sm) {
-            padding: 0 #{$gutterSpace * 2};
+            padding: 0 space(4);
         }
 	}
 }

@@ -2,7 +2,7 @@
 layout: default
 about-headline: In love with coffee since 2004.
 about: |
-    We’re part of Cairns. And what we do with our coffee is too. Our cafes and our roastery is about making our coffee love into a better community. So drop in if you’re about. We’d like to get to know you. You should definitely try our lorem ipsum here.
+    We’re part of Cairns. And what we do with our coffee is too. Our cafes and our roastery is about using our love of coffee to make a better community. So drop in if you’re ever around. We’d like to get to know you. You should definitely try our lorem ipsum here.
 ---
 
 
@@ -11,10 +11,7 @@ about: |
         <div class="o-ghost">
             <div class="o-ghost-child">
                 <h1 class="c-headline--sm u-textLeft">Welcome! Thanks for stopping by. We don’t just source, roast & brew our own coffee. Every morning, we make our place a better place.</h1>
-                <cite class="c-cite">
-                    <span>— Billy</span>
-                    (<a href="{{ site.instagram }}">@billyscoffeecairns</a>)
-                </cite>
+                {% include cite.html %}
             </div>
 
         </div>
@@ -33,69 +30,61 @@ about: |
             <div class="o-container--super">
                 <div class="Grid Grid--withGutter">
                     <div class="Grid-cell u-sm-size1of3">
-                        <a class="c-block-cell" href="https://goo.gl/maps/1i2Dvon5ubP2">
+                        <div class="c-block-cell">
                             <img src="{{ site.assetsurl }}billys-markets.jpg" alt="Billys Coffee at Rusty's markets" />
                             <p>
-                                <strong>Billy’s Coffee</strong>
-                                Rustys Market, 57-89 Grafton St, Cairns<br>
-                                Fri–Sun 6am–3pm
+                                <a href="https://goo.gl/maps/TNTnAM9CyH22">
+                                    <strong>Billy’s Coffee</strong>
+                                    Rustys Market, 57-89 Grafton St, Cairns<br>
+                                    Fri–Sun 6am–3pm
+                                </a>
                             </p>
-                        </a>
+                        </div>
                     </div>
-                    <div class="Grid-cell u-sm-size1of3">
-                        <a class="c-block-cell" href="https://goo.gl/maps/1i2Dvon5ubP2">
+                    <div class="Grid-cell u-sm-size1of3 u-sm-spaceT2">
+                        <div class="c-block-cell">
                             <img src="{{ site.assetsurl }}billys-cafe.jpg" alt="" />
                             <p>
-                                <strong>Billy’s Café</strong>
-                                144 Sheridan St, Cairns<br>
-                                Fri–Sun 6am–3pm
+                                <a href="https://goo.gl/maps/4psBv2dPWU22">
+                                    <strong>Billy’s Cafe</strong>
+                                    57 Sheridan St, Cairns<br>
+                                    Fri–Sun 6am–3pm
+                                </a>
                             </p>
-                        </a>
+                        </div>
                     </div>
-                    <div class="Grid-cell u-sm-size1of3">
-                        <a class="c-block-cell" href="https://goo.gl/maps/1i2Dvon5ubP2">
+                    <div class="Grid-cell u-sm-size1of3 u-sm-spaceT2">
+                        <div class="c-block-cell">
                             <img src="{{ site.assetsurl }}billys-roasting.jpg" alt="" />
                             <p>
-                                <strong>Billy’s Roasting</strong>
-                                144 Sheridan St, Cairns<br>
-                                Fri–Sun 6am–3pm
+                                <a href="https://goo.gl/maps/nRLrHEVQCqS2">
+                                    <strong>Billy’s Roasting</strong>
+                                    6/34 Wharf Street, Esplanade, Cairns<br>
+                                    Fri–Sun 6am–3pm
+                                </a>
                             </p>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="c-section o-coverImage" style="background-image: url('{{ site.assetsurl }}bg-blends.jpg')">
+    <section class="c-section o-coverImage o-coverImage--blends" style="background-image: url('{{ site.assetsurl }}bg-blends.jpg')">
         <div class="c-block u-textCenter">
             <div class="o-container">
-                <h1 class="c-headline">Buy Billy's best blends.</h1>
-                <h2 class="c-headline--sm u-textWtSemi">Locally sourced. Fresh roasted daily.</h2>
+                <h1 class="c-headline">Buy Billy's <span class="u-sm-lineBreak">best blends.</span></h1>
+                <h2 class="c-headline--smSemi">Locally sourced. Fresh roasted daily.</h2>
             </div>
         </div>
         <div class="c-block">
             <div class="o-container--super">
-                <div class="Grid Grid--withGutter">
-                    <div class="Grid-cell u-size1of2">
-                        <a class="c-block-cell" href="https://goo.gl/maps/1i2Dvon5ubP2">
-                            <img src="{{ site.assetsurl }}billys-markets.jpg" alt="Billys Coffee at Rusty's markets" />
-                            <p>
-                                <strong>Billy’s Coffee</strong>
-                                Rustys Market, 57-89 Grafton St, Cairns<br>
-                                Fri–Sun 6am–3pm
-                            </p>
-                        </a>
+                <div class="Grid Grid--withGutter Grid--alignCenter">
+                    <div class="Grid-cell u-sm-size1of3">
+                        {% include product.html %}
                     </div>
-                    <div class="Grid-cell u-size1of2">
-                        <a class="c-block-cell" href="https://goo.gl/maps/1i2Dvon5ubP2">
-                            <img src="{{ site.assetsurl }}billys-cafe.jpg" alt="" />
-                            <p>
-                                <strong>Billy’s Café</strong>
-                                144 Sheridan St, Cairns<br>
-                                Fri–Sun 6am–3pm
-                            </p>
-                        </a>
+                    <div class="Grid-cell u-sm-size1of3 u-sm-spaceT2">
+                        {% include product.html %}
                     </div>
 
                 </div>
@@ -106,15 +95,16 @@ about: |
     <section class="c-section">
         <div class="c-block">
             <div class="o-container--super">
-                <div class="Grid Grid--withGutter Grid--alignCenter">
-                    <div class="Grid-cell u-size1of3">
+                <div class="Grid Grid--withGutter Grid--alignCenter Grid--alignMiddle">
+                    <div class="Grid-cell u-sm-size1of3">
                         <img src="{{ site.assetsurl }}billy-instagram.jpg" alt="" />
                     </div>
-                    <div class="Grid-cell u-size1of3">
-                        <p>
+                    <div class="Grid-cell u-sm-size1of2 u-sm-spaceT">
+                        <p class="c-text--lg">
                             <strong>{{ page.about-headline }}</strong>
                             {{ page.about }}
                         </p>
+                        {% include cite.html %}
                     </div>
 
                 </div>
@@ -122,3 +112,19 @@ about: |
         </div>
     </section>
 </main>
+
+<footer class="c-footer">
+    <div class="c-block u-textCenter">
+        <div class="o-container">
+            {% include enews.html %}
+        </div>
+    </div>
+    <div class="c-block u-textCenter">
+        <div class="o-container">
+            <img class="c-logo" src="{{ site.assetsurl }}billys-logo.png" alt="" />
+            <h2 class="c-headline--sm">Billys Coffee, Cairns</h2>
+            <h3 class="c-headline--xsSemi">Locally sourced. Fresh roasted daily.</h3>
+            <p class="c-text--sm">© {{ 'now' | date: "%Y" }}. Site by <a href="http://www.patternworks.com.au">Patternworks.</a></p>
+        </div>
+    </div>
+</footer>

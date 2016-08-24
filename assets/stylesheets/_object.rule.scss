@@ -6,9 +6,9 @@
 
 
 // TOD0: figure out ways to manage this complexity…
-// .msm-SectionRule        { @include Sectionrule(); @include respond-to(sm) { display: none; } }
-// .msm-SectionRule--light { @include Sectionrule($mixin-color: rgba( palette(muted), 0.5) ); @include respond-to(sm) { display: none; } }
-// .mxs-SectionRule        { @include respond-to(max-xs) { @include Sectionrule(); } }
+// .msm-SectionRule        { @include Sectionrule(); @include media-breakpoint-up(sm) { display: none; } }
+// .msm-SectionRule--light { @include Sectionrule($mixin-color: rgba( palette(muted), 0.5) ); @include media-breakpoint-up(sm) { display: none; } }
+// .mxs-SectionRule        { @include media-breakpoint-down(sm) { @include Sectionrule(); } }
 
 @mixin rule(
 	$mixin-color: palette(brand),

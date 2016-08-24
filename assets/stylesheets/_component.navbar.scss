@@ -16,7 +16,7 @@
 	padding: space(1);
 	@include clearfix;
 
-	@include respond-to(sm) {
+	@include media-breakpoint-up(sm) {
 		border-radius: 0;
 	}
 }
@@ -32,7 +32,7 @@
 .navbar-full {
 	z-index: 1;
 
-	@include respond-to(sm) {
+	@include media-breakpoint-up(sm) {
 		border-radius: map-fetch($border-radius, base);
 	}
 }
@@ -46,7 +46,7 @@
 	z-index: 2;
 
 	// Undo the rounded corners
-	@include respond-to(sm) {
+	@include media-breakpoint-up(sm) {
 		border-radius: 0;
 	}
 }
@@ -66,7 +66,7 @@
 	width: 100%;
 
 	// Undo the rounded corners
-	@include respond-to(sm) {
+	@include media-breakpoint-up(sm) {
 		border-radius: 0;
 	}
 }
@@ -116,7 +116,7 @@
 	background: none;
 	border: 1px solid transparent;
 	border-radius: map-fetch($border-radius, base);
-	font-size: fontsize(Text--sm, xs);
+	font-size: fontsize(text--sm, xs);
 	line-height: 1;
 	padding: .5rem .75rem;
 
@@ -132,7 +132,7 @@
 		transition: all 0.2s;
 		width: 35px;
 
-		@include respond-to(xs) {
+		@include media-breakpoint-up(xs) {
 			border-radius: 1.5px;
 			height: 3px;
 			width: rem(38);
@@ -141,7 +141,7 @@
 		+ .icon-bar {
 			margin-top: 6px;
 
-			@include respond-to(sm) {
+			@include media-breakpoint-up(sm) {
 				margin-top: 7px;
 			}
 
@@ -156,7 +156,7 @@
 //             transform: rotate(45deg);
 //             transform-origin: 10% 100%;
 //
-//             @include respond-to(xs) {
+//             @include media-breakpoint-up(xs) {
 //                 transform-origin: 0% 100%;
 //             }
 //         }
@@ -176,17 +176,17 @@
 // Custom override for
 .navbar-toggleable {
 	&-xs {
-		@include respond-to(sm) {
+		@include media-breakpoint-up(sm) {
 			display: block !important;
 		}
 	}
 	&-sm {
-		@include respond-to(md) {
+		@include media-breakpoint-up(md) {
 			display: block !important;
 		}
 	}
 	&-md {
-		@include respond-to(lg) {
+		@include media-breakpoint-up(lg) {
 			display: block !important;
 		}
 	}

@@ -99,12 +99,14 @@
 // At media-queries.
 // --------------------------------------------------------------------------
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-	@include media-breakpoint-up($breakpoint) {
-		.u-#{$breakpoint}-textBreak { word-wrap: break-word !important; }
-		.u-#{$breakpoint}-textCenter { text-align: center !important; }
-		.u-#{$breakpoint}-textLeft { text-align: left !important; }
-		.u-#{$breakpoint}-textRight { text-align: right !important; }
-		.u-#{$breakpoint}-textNoWrap { white-space: nowrap !important; }
-	}
+@if ($suit-text-breakpoints == true) {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+    	@include media-breakpoint-up($breakpoint) {
+    		.u-#{$breakpoint}-textBreak { word-wrap: break-word !important; }
+    		.u-#{$breakpoint}-textCenter { text-align: center !important; }
+    		.u-#{$breakpoint}-textLeft { text-align: left !important; }
+    		.u-#{$breakpoint}-textRight { text-align: right !important; }
+    		.u-#{$breakpoint}-textNoWrap { white-space: nowrap !important; }
+    	}
+    }
 }

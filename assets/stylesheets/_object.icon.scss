@@ -57,7 +57,7 @@
 		width: rem(40);
 		height: rem(40);
 
-		@include respond-to(xs) {
+		@include media-breakpoint-up(xs) {
 			width: rem(48);
 			height: rem(48);
 		}
@@ -66,7 +66,7 @@
 	&--left {
 		margin-right: 5px;
 
-		@include respond-to(xs) {
+		@include media-breakpoint-up(xs) {
 			margin-right: rem(7);
 		}
 	}
@@ -74,7 +74,7 @@
 	&--leftSm {
 		margin-right: 1px;
 
-		@include respond-to(xs) {
+		@include media-breakpoint-up(xs) {
 			margin-right: rem(2);
 		}
 	}
@@ -82,7 +82,7 @@
 	&--right {
 		margin-left: 5px;
 
-		@include respond-to(xs) {
+		@include media-breakpoint-up(xs) {
 			margin-left: rem(7);
 		}
 	}
@@ -90,7 +90,7 @@
 	&--rightSm {
 		margin-left: 1px;
 
-		@include respond-to(xs) {
+		@include media-breakpoint-up(xs) {
 			margin-left: rem(2);
 		}
 	}

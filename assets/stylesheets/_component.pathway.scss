@@ -25,7 +25,7 @@
         color: palette(charcoal) !important;
     }
 
-    @include respond-to(sm) {
+    @include media-breakpoint-up(sm) {
         padding: space(2.5);
     }
 }

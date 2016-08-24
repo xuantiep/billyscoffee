@@ -27,11 +27,12 @@ em, b {
 html {
 	@include typeReset();
 	color: palette(text);
-	font-family: $font-text-regular;
+	font-family: $font-text-regular, $main-font-stack;
 	font-size: 100%;
 	line-height: $base-line-height-unit;
 	text-align: left;
-	text-rendering: optimizeLegibility;
+	//text-rendering: optimizeLegibility;
+    text-rendering: geometricPrecision;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
@@ -47,5 +48,5 @@ blockquote, p, address,
 table, time,
 fieldset,
 pre {
-	margin-bottom: $paragraphSpacer;
+	margin-bottom: $paragraphSpace;
 }

@@ -19,7 +19,7 @@
 	position: relative;
 	width: auto;
 
-	@include respond-to(xs) {
+	@include media-breakpoint-up(xs) {
 		width: 50%;
 	}
 

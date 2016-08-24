@@ -78,7 +78,7 @@ a.gallery-cell {
 	visibility: hidden;
 	z-index: 1000;
 
-	@include respond-to(xs) {
+	@include media-breakpoint-up(xs) {
 		visibility: visible;
 	}
 

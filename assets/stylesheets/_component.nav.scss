@@ -8,8 +8,8 @@
 // Nav toggle (in header)
 // --------------------------------------------------------------------------
 
-$navBarHeight: $blockSpacer / 2;
-$navBarCube  : $blockSpacer / 7;
+$navBarHeight: $blockSpace / 2;
+$navBarCube  : $blockSpace / 7;
 
 .Nav {
 	@include o-posFullScreen(absolute);

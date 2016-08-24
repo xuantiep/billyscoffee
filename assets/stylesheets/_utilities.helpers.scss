@@ -34,7 +34,7 @@
 
 .u-fullHeight       { height: 100%; }
 .u-fullWidth        { width: 100%; }
-.u-mxs-fullWidth    { @include respond-to(max-xs) { width: 100%; } }
+.u-mxs-fullWidth    { @include media-breakpoint-down(sm) { width: 100%; } }
 
 
 // basic hide for liquid conditionals
@@ -101,7 +101,7 @@
 .u-bgBrand          { background-color: palette(brand) !important; }
 .u-bgBrandAlt       { background-color: palette(brand-complement) !important; }
 
-.u-sm-bgNeutral     { @include respond-to(sm) { background-color: palette(neutral) !important; } }
+.u-sm-bgNeutral     { @include media-breakpoint-up(sm) { background-color: palette(neutral) !important; } }
 
 
 // Border colors
@@ -112,7 +112,7 @@
 .u-borderDark       { border: 1px solid palette(dark) !important; }
 .u-borderBrand      { border: 1px solid palette(brand) !important; }
 
-.u-sm-borderDark    { @include respond-to(sm) { border: 1px solid palette(dark) !important; } }
+.u-sm-borderDark    { @include media-breakpoint-up(sm) { border: 1px solid palette(dark) !important; } }
 
 
 // // Font sizes
@@ -123,11 +123,11 @@
 // .u-textSizeRg       { font-size: size(font, text) !important; }
 // .u-textSizeLg       { font-size: size(font, text-lg) !important; }
 //
-// .u-sm-textSizeRg    { @include respond-to(sm) { font-size: size(font, text) !important; } }
+// .u-sm-textSizeRg    { @include media-breakpoint-up(sm) { font-size: size(font, text) !important; } }
 //
 // .u-headerSizeRg {
 // 	font-size: map-fetch($size, font, headerRg, xs) !important;
-// 	@include respond-to(xs) { font-size: map-fetch($size, font, headerRg, base) !important }
+// 	@include media-breakpoint-up(xs) { font-size: map-fetch($size, font, headerRg, base) !important }
 // }
 //
 // .u-textCenterBlock { > * { @extend .u-textCenter; } }
@@ -166,14 +166,14 @@
 // --------------------------------------------------------------------------
 
 .u-alignBlockUp {
-	@include respond-to(sm) {
+	@include media-breakpoint-up(sm) {
 		// transform: translateY( rem(-5) );
 		margin-top: rem(-5);
 	}
 }
 
 .u-alignBlockDown {
-	@include respond-to(sm) {
+	@include media-breakpoint-up(sm) {
 		margin-top: rem(5);
 		// transform: translateY( rem(8) );
 	}

@@ -8,12 +8,12 @@
 @mixin blockSpacer {
 	content: 'viewport-units-buggyfill; padding: calc(22.5vh) 0;';
 	// padding: space(10) 0;
-	padding: calc( #{$blockSpacer}  + (#{$paragraphSpacer} * 1.25) ) 0;
+	padding: calc( #{$blockSpace}  + (#{$paragraphSpace} * 1.25) ) 0;
 }
 
 @mixin betweenSpacer {
 	content: 'viewport-units-buggyfill; margin: calc(9vh + 35.625px) auto;';
-	margin: calc( (#{$blockSpacer} / 2.5) + (#{$paragraphSpacer} * 1.25) ) auto;
+	margin: calc( (#{$blockSpace} / 2.5) + (#{$paragraphSpace} * 1.25) ) auto;
 }
 
 @mixin heroTuck {
@@ -148,7 +148,7 @@
 .Block--space {
 	@include blockSpacer();
 	display: block;
-	padding: calc(#{$blockSpacer} * 1.5) 0;
+	padding: calc(#{$blockSpace} * 1.5) 0;
 }
 
 // .Content ~ .Block--space,
@@ -161,7 +161,7 @@
 	border: 0;
 	border-top: 1px solid palette(base);
 	display: block;
-	padding: calc(#{$blockSpacer} * 0.625) 0;
+	padding: calc(#{$blockSpace} * 0.625) 0;
 
 	@include on-event() {
 		border-color: palette(base);
@@ -184,18 +184,18 @@
 
 .Block--figure {
 	content: 'viewport-units-buggyfill; padding-bottom: calc(100vh);';
-	padding: calc(#{$blockSpacer} / 2) 0;
+	padding: calc(#{$blockSpace} / 2) 0;
 }
 
 .Block--figureSm {
 	content: 'viewport-units-buggyfill; padding-bottom: calc(100vh);';
-	margin: calc(#{$blockSpacer} / 4) auto;
+	margin: calc(#{$blockSpace} / 4) auto;
 	max-width: container-width(sm);
 }
 
 .Block--figureLg {
 	content: 'viewport-units-buggyfill; padding-bottom: calc(100vh);';
-	margin: calc(#{$blockSpacer} / 2.5) auto;
+	margin: calc(#{$blockSpace} / 2.5) auto;
 	max-width: container-width(lg);
 
 	&Img {
@@ -209,7 +209,7 @@ $breakContainerSuper: calc( ( #{ container-width(md) } - 80vw) * 0.5 );
 
 .Block--figureSu {
 	content: 'viewport-units-buggyfill; padding-bottom: calc(100vh);';
-	margin: calc(#{$blockSpacer} / 2.5) #{$breakContainerSuper};
+	margin: calc(#{$blockSpace} / 2.5) #{$breakContainerSuper};
 	max-width: 80vw;
 }
 

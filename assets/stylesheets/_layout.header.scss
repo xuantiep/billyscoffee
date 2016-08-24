@@ -5,8 +5,6 @@
 // --------------------------------------------------------------------------
 
 
-$blockSpace: 12vh;
-
 .c-header {
     height: 100vh;
 	position: relative;
@@ -36,72 +34,71 @@ $blockSpace: 12vh;
 }
 
 .c-logo {
-    width: 130px;
-    margin-bottom: space(0.5);
+    width: 90px;
+    margin-bottom: space(0.75);
+
+    @include media-breakpoint-up(sm) {
+        width: 130px;
+    }
+}
+
+.c-footer {
+    padding: 0 0 $blockSpace / 2;
 }
 
 
+// products
+
+@keyframes zoom {
+	0%   { transform: scale(1); }
+	100% { transform: scale(1.75); }
+}
+
+@mixin glow() {
+	@include smoothTransition();
+	transition-duration: 0.3s;
+	transition-property: box-shadow;
+
+	&:hover {
+		box-shadow: 0 0 space(1.5) palette(muted);
+	}
+}
+
+.c-product {
+    @include glow();
+
+    &:hover {
+        cursor: pointer;
+
+        .FlexEmbed-content {
+            //animation: zoom 80s infinite;
+        }
+    }
+}
+
+.c-product-text {
+    @include textRg();
+    background-color: palette(background);
+    color: palette(brand-complement);
+    padding: space(0.6) space(1) space(1.8);
+    text-transform: uppercase;
+}
+
+.c-product-name {
+    @include textLg();
+    color: palette(brand-complement);
+    font-family: $font-text-bold;
+    margin-bottom: space(0.1);
+    text-transform: none;
+}
 
 
+// quick spacers
 
+.u-spaceT     { margin-top: space(1); }
+.u-spaceT2    { margin-top: space(2); }
+.u-spaceB     { margin-bottom: space(1); }
+.u-spaceB2    { margin-bottom: space(2); }
 
-
-
-
-
-// Slide
-// --------------------------------------------------------------------------
-
-// .Slide {
-// 	&--phn  { @include reverseTextBlock(); background-color: palette(project-phn); }
-// 	&--test { @include reverseTextBlock(); background-color: salmon; }
-// }
-
-
-
-// Quick Hero figure component
-// --------------------------------------------------------------------------
-
-// .Hero-wrapper {
-// 	@include o-posFullScreen(absolute);
-// 	top: auto;
-// }
-//
-// .Hero {
-// 	@include container( container-width(xl) );
-//
-// 	&--right { text-align: right; }
-//
-// 	img {
-// 		display: inline-block !important;
-// 		max-width: 600px;
-// 	}
-// }
-
-
-
-// .Slide {
-// 	@include baseTransition;
-// 	background-position: 50% 100%;
-// 	background-repeat: no-repeat;
-// 	bottom: 0;
-// 	background-size: contain;
-// 	height: 100%;
-// 	left: space(1);
-// 	// max-height: 45%;
-// 	max-height: 73%;
-// 	// max-height: 50vh;
-// 	margin: 0 auto;
-// 	position: absolute;
-// 	right: space(1);
-//
-// 	@include respond-to(md) {
-// 		left: 0;
-// 		right: 0;
-// 	}
-//
-// 	// @include respond-to(md) { max-height: 50vh; }
-// 	// @include respond-to(lg)  { max-height: 60%; }
-// 	// @include respond-to(xl)  { max-height: 66%; }
-// 	// @include respond-to(xxl) { max-height: 71%; }
-// }
+.u-sm-spaceT  { @include media-breakpoint-down(sm) { margin-top: space(1); } }
+.u-sm-spaceT2 { @include media-breakpoint-down(sm) { margin-top: space(2); } }

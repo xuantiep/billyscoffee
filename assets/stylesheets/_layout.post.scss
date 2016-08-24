@@ -20,12 +20,12 @@ a.Post--inList {
 	@include complexLink();
 	@include o-aligner;
 	border: 0;
-	margin-bottom: $blockSpacer / 3;
+	margin-bottom: $blockSpace / 3;
 	position: relative;
 
 	+ .Post--inList {
 		// margin-top: space(3.25);
-		margin-top: $blockSpacer / 2;
+		margin-top: $blockSpace / 2;
 	}
 
 	> .Post-aligner {
@@ -75,7 +75,7 @@ a.Post--inList {
 
 .Post-content {
 	// content: 'viewport-units-buggyfill; padding-bottom: calc(100vh);';
-	padding: calc(#{$blockSpacer} * 0.25) 0 calc(#{$blockSpacer});
+	padding: calc(#{$blockSpace} * 0.25) 0 calc(#{$blockSpace});
 }
 
 

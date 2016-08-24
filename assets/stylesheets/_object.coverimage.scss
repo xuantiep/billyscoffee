@@ -51,6 +51,12 @@
 	@include coverImage(true);
 }
 
+.o-coverImage--blends {
+	@include media-breakpoint-down(sm) {
+	    background-position-x: 0;
+	}
+}
+
 .o-containImage {
 	@include coverImage();
 	background-size: contain;

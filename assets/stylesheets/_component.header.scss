@@ -16,7 +16,7 @@
 	margin-top: space(2.5);
 	position: relative;
 
-	@include respond-to(sm) { margin-top: space(5); }
+	@include media-breakpoint-up(sm) { margin-top: space(5); }
 }
 
 // .Header-logo {
@@ -34,7 +34,7 @@
 // 	color: palette(white);
 // 	letter-spacing: 0.03em;
 //
-// 	@include respond-to(sm) {
+// 	@include media-breakpoint-up(sm) {
 // 		margin: 0 auto;
 // 		width: 70%;
 // 	}
@@ -62,10 +62,10 @@
 	// padding-bottom: 56.5%;
 	padding-bottom: 66vh;
 
-	@include respond-to(xs)  { padding-bottom: 100vh; }
-	// @include respond-to(lg)  { padding-bottom: 56.5%; }
-	// @include respond-to(xl)  { padding-bottom: 60.5%; }
-	// @include respond-to(xxl) { padding-bottom: 52.5%; }
+	@include media-breakpoint-up(xs)  { padding-bottom: 100vh; }
+	// @include media-breakpoint-up(lg)  { padding-bottom: 56.5%; }
+	// @include media-breakpoint-up(xl)  { padding-bottom: 60.5%; }
+	// @include media-breakpoint-up(xxl) { padding-bottom: 52.5%; }
 }
 
 .Slide {
@@ -83,13 +83,13 @@
 	position: absolute;
 	right: space(1);
 
-	@include respond-to(md) {
+	@include media-breakpoint-up(md) {
 		left: 0;
 		right: 0;
 	}
 
-	// @include respond-to(md) { max-height: 50vh; }
-	// @include respond-to(lg)  { max-height: 60%; }
-	// @include respond-to(xl)  { max-height: 66%; }
-	// @include respond-to(xxl) { max-height: 71%; }
+	// @include media-breakpoint-up(md) { max-height: 50vh; }
+	// @include media-breakpoint-up(lg)  { max-height: 60%; }
+	// @include media-breakpoint-up(xl)  { max-height: 66%; }
+	// @include media-breakpoint-up(xxl) { max-height: 71%; }
 }

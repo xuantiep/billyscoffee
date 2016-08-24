@@ -151,12 +151,14 @@ $Grid-gutter-size: space(0.75);
 // At media-queries.
 // --------------------------------------------------------------------------
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-	@include media-breakpoint-up($breakpoint) {
-		.#{$breakpoint}-Grid--alignCenter  { justify-content: center; }
-		.#{$breakpoint}-Grid--alignRight   { justify-content: flex-end; }
-		.#{$breakpoint}-Grid--alignMiddle  { align-items: center; }
-		.#{$breakpoint}-Grid--alignBottom  { align-items: flex-end; }
-		.#{$breakpoint}-Grid-cell--center  { margin: 0 auto; }
-	}
+@if ($suit-grid-breakpoints == true) {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+    	@include media-breakpoint-up($breakpoint) {
+    		.#{$breakpoint}-Grid--alignCenter  { justify-content: center; }
+    		.#{$breakpoint}-Grid--alignRight   { justify-content: flex-end; }
+    		.#{$breakpoint}-Grid--alignMiddle  { align-items: center; }
+    		.#{$breakpoint}-Grid--alignBottom  { align-items: flex-end; }
+    		.#{$breakpoint}-Grid-cell--center  { margin: 0 auto; }
+    	}
+    }
 }
