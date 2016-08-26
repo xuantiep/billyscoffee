@@ -18,17 +18,22 @@ instagram: https://instagram.com/billyscoffeecairns
 snipcart-api-key: MzkzOGNmOWUtMWZiMS00Y2JkLTg3NDAtYmFmMDFkOGU3NjI5NjM2MDc2MTk1MjY3Njc0MDIx
 google-analytics: ''
 
+# Collections
+collections:
+    products:
+        output: true
+
 # Markdown settings
 markdown: kramdown
 kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+    input: GFM
+    syntax_highlighter: rouge
 
 # Sass settings
-sass:
-  add_charset: true
-  sass_dir: assets/sass
-  style: :compressed
+# sass:
+#   add_charset: true
+#   sass_dir: assets/sass
+#   style: :compressed
 
 # Build settings
 exclude:
@@ -44,6 +49,7 @@ exclude:
   - assets/icons
   - assets/images-src
   - assets/javascripts
+  - assets/stylesheets-src
 
 # Plugin settings
 gems:

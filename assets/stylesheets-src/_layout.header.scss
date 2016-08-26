@@ -47,50 +47,7 @@
 }
 
 
-// products
 
-@keyframes zoom {
-	0%   { transform: scale(1); }
-	100% { transform: scale(1.75); }
-}
-
-@mixin glow() {
-	@include smoothTransition();
-	transition-duration: 0.3s;
-	transition-property: box-shadow;
-
-	&:hover {
-		box-shadow: 0 0 space(1.5) palette(muted);
-	}
-}
-
-.c-product {
-    @include glow();
-
-    &:hover {
-        cursor: pointer;
-
-        .FlexEmbed-content {
-            //animation: zoom 80s infinite;
-        }
-    }
-}
-
-.c-product-text {
-    @include textRg();
-    background-color: palette(background);
-    color: palette(brand-complement);
-    padding: space(0.6) space(1) space(1.8);
-    text-transform: uppercase;
-}
-
-.c-product-name {
-    @include textLg();
-    color: palette(brand-complement);
-    font-family: $font-text-bold;
-    margin-bottom: space(0.1);
-    text-transform: none;
-}
 
 
 // quick spacers

@@ -23,7 +23,7 @@
 	$mixinSize: text,
 	$mixinColor: palette(brand),
 	$mixinFont: $font-text-regular,
-	$mixinLetterSpacing: 0.05em,
+	$mixinLetterSpacing: 0,
 	$mixinLineHeight: $base-line-height-unit
 ) {
 
@@ -53,7 +53,9 @@
 // Text components by size…
 
 @mixin textRg() {
-	@include textTemplate();
+	@include textTemplate(
+        $mixinLetterSpacing: 0.015em
+    );
 }
 
 @mixin textSm() {
@@ -66,7 +68,8 @@
 @mixin textLg() {
 	@include textTemplate(
 		$mixinSize: text--lg,
-		$mixinLetterSpacing: 0.01em
+        $mixinLetterSpacing: 0.005em,
+        $mixinLineHeight: 1.4
 	);
 }
 
@@ -105,9 +108,9 @@
 .c-cite {
     @include textRg();
     display: block;
-    font-family: $font-text-bold;
+    font-family: $font-text-semibold;
     font-style: normal;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.12em;
     margin-top: space(0.5);
     text-transform: uppercase;
 
@@ -122,7 +125,7 @@
 
 .c-text--lg > strong {
     display: inline;
-    font-family: $font-text-extrabold;
+    font-family: $font-text-bold;
     text-transform: initial;
 }
 

@@ -32,7 +32,7 @@ textarea {
     @include textLg();
     border-bottom: 2px solid palette(brand);
     line-height: map-fetch($button-height, lg);
-	padding: 0;
+	padding: 0 0 3px 0;
 	transition: all map-fetch($transition, duration, long) map-fetch($transition, type, base);
 
     // theme unused
@@ -43,8 +43,9 @@ textarea {
 	//	outline: 0;
 	//}
 
+    // filled-in form styling
 	&:-webkit-autofill {
-		-webkit-box-shadow: 0 0 0 rem(100) darken( palette(neutral),4%) inset;
+		-webkit-box-shadow: 0 0 0 rem(100) palette(faint) inset;
 		-webkit-text-fill-color: palette(brand);
 		background-clip: padding-box;
 	}

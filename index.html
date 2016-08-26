@@ -2,7 +2,7 @@
 layout: default
 about-headline: In love with coffee since 2004.
 about: |
-    We’re part of Cairns. And what we do with our coffee is too. Our cafes and our roastery is about using our love of coffee to make a better community. So drop in if you’re ever around. We’d like to get to know you. You should definitely try our lorem ipsum here.
+    We’re part of Cairns. And what we do with our coffee is too. With our cafes and roastery, we use our love of coffee to make a better community. So drop in if you’re around. We’d like to get to know you. And if you can't, then you should follow us on instagram ☺
 ---
 
 
@@ -11,7 +11,10 @@ about: |
         <div class="o-ghost">
             <div class="o-ghost-child">
                 <h1 class="c-headline--sm u-textLeft">Welcome! Thanks for stopping by. We don’t just source, roast & brew our own coffee. Every morning, we make our place a better place.</h1>
-                {% include cite.html %}
+                <cite class="c-cite">
+                    <span>— Billy</span>
+                    (<a href="{{ site.instagram }}">@billyscoffeecairns</a>)
+                </cite>
             </div>
 
         </div>
@@ -80,13 +83,9 @@ about: |
         <div class="c-block">
             <div class="o-container--super">
                 <div class="Grid Grid--withGutter Grid--alignCenter">
-                    <div class="Grid-cell u-sm-size1of3">
+                    {% for product in site.products %}
                         {% include product.html %}
-                    </div>
-                    <div class="Grid-cell u-sm-size1of3 u-sm-spaceT2">
-                        {% include product.html %}
-                    </div>
-
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -95,19 +94,27 @@ about: |
     <section class="c-section">
         <div class="c-block">
             <div class="o-container--super">
-                <div class="Grid Grid--withGutter Grid--alignCenter Grid--alignMiddle">
-                    <div class="Grid-cell u-sm-size1of3">
-                        <img src="{{ site.assetsurl }}billy-instagram.jpg" alt="" />
-                    </div>
-                    <div class="Grid-cell u-sm-size1of2 u-sm-spaceT">
-                        <p class="c-text--lg">
-                            <strong>{{ page.about-headline }}</strong>
-                            {{ page.about }}
-                        </p>
-                        {% include cite.html %}
-                    </div>
 
-                </div>
+                <a href="{{ site.instagram }}" style="display: block">
+                    <div class="Grid Grid--withGutter Grid--alignCenter Grid--alignMiddle">
+                        <div class="Grid-cell u-sm-size1of3">
+                            <img src="{{ site.assetsurl }}billy-instagram.jpg" alt="" />
+                        </div>
+                        <div class="Grid-cell u-sm-size5of12 u-sm-spaceT">
+                            <p class="c-text--lg">
+                                <strong>{{ page.about-headline }}</strong>
+                                {{ page.about }}
+                            </p>
+                            <cite class="c-cite">
+                                <span>— Billy</span>
+                                (<span>@billyscoffeecairns</span>)
+                            </cite>
+
+                        </div>
+
+                    </div>
+                </a>
+
             </div>
         </div>
     </section>

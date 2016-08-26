@@ -1,18 +1,28 @@
-<div class="c-product snipcart-add-item"
-    data-item-id="2"
-    data-item-name="Bacon"
-    data-item-price="3.00"
-    data-item-weight="20"
-    data-item-url="/"
-    data-item-description="Some fresh bacon">
-    <div class="FlexEmbed">
-        <div class="FlexEmbed-ratio"></div>
-        <div class="FlexEmbed-content">
-            <div class="o-posAbsoluteCenter o-coverImage" style="background-image: url('{{ site.assetsurl }}product-test.jpg')"></div>
+<div class="Grid-cell u-sm-size1of3">
+    <a class="c-product snipcart-add-item"
+        data-item-name="{{ product.name }}"
+        data-item-id="{{ product.sku }}"
+        data-item-image="{{ product.image }}"
+        data-item-url="{{ product.url | prepend: site.baseurl }}"
+        data-item-price="{{ product.price }}"
+        data-item-weight="{{ product.weight }}"
+        data-item-description="{{ product.description }}"
+        >
+
+        <div class="FlexEmbed">
+            <div class="FlexEmbed-ratio"></div>
+            <div class="FlexEmbed-content">
+                <div class="o-posAbsoluteCenter o-coverImage" style="background-image: url('{{ site.assetsurl }}product-test.jpg')"></div>
+            </div>
         </div>
-    </div>
-    <div class="c-product-text">
-        <div class="c-product-name">Tufi Berry Roast</div>
-        Add to cart →
-    </div>
+        <div class="c-product-text">
+            <div class="c-product-name">{{ product.name }}</div>
+            <div class="c-product-description">{{ product.description }}</div>
+            <div class="u-flex u-flexRow">
+                <div class="c-product-price">${{ product.price }}</div>
+                <div class="c-product-action u-flexExpandLeft">Add to cart →</div>
+            </div>
+        </div>
+
+    </a>
 </div>

@@ -44,6 +44,7 @@
     @include typeReset();
     @include textLg();
     line-height: map-fetch($button-height, lg);
+    padding-bottom: 3px;
 
     // theme unused
     //color: palette(brand);

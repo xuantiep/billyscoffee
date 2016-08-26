@@ -16,7 +16,7 @@
 @import "tools.mixins.breakpoints";
 
 //@import "vendor.suitcss.u-position";
-@import "vendor.suitcss.u-display";
+//@import "vendor.suitcss.u-display";
 @import "vendor.suitcss.u-size";
 @import "vendor.suitcss.u-flexbox";
 @import "vendor.suitcss.u-text";
@@ -74,6 +74,8 @@
 //@import "component.navbar";
 //@import "component.fontfaceonload";
 //@import "component.spinkit";
+@import "component.productcard";
+@import "component.snipcart";
 
 //@import "utilities.spacers.v2";
 //@import "utilities.helpers";

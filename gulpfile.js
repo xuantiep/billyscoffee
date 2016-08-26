@@ -39,7 +39,6 @@ var options = {
 	},
 
 	build : {
-		// tasks       : [ 'images', 'compile:sass', 'minify:js'],
 		tasks       : [ 'images', 'compile:sass'],
 		destination : 'build/'
 	},
@@ -50,7 +49,8 @@ var options = {
 
 	css : {
 		files       : 'assets/stylesheets/*.css',
-		file        : 'assets/stylesheets/application.css'
+		file        : 'assets/stylesheets/application.css',
+		destination : 'assets/stylesheets'
 	},
 
 	fonts : {
@@ -74,7 +74,8 @@ var options = {
 			'node_modules/fontfaceonload/dist/fontfaceonload.js',
 			'assets/javascripts/*.js'
 		],
-		file        : 'assets/javascripts/application.js'
+		file        : 'assets/javascripts-src/application.js',
+        destination : 'assets/javascripts'
 	},
 
 	pagespeedindex : {
@@ -83,7 +84,7 @@ var options = {
 	},
 
 	sass : {
-		files       : 'assets/stylesheets/*.scss',
+		files       : 'assets/stylesheets-src/*.scss',
 		destination : 'assets/stylesheets/'
 	},
 
@@ -99,7 +100,6 @@ var options = {
 			return [
 				[ 'images' ],
 				[ 'minify:js' ],
-				// [ 'compile:sass', 'minify:css' ]
 				[ 'compile:sass' ]
 			]
 		}
@@ -166,7 +166,7 @@ gulp.task( 'compile:sass', function() {
 		.pipe( plugins.connect.reload() );
 });
 
-// from W6…
+// pip order example…
 // gulp.task( 'compile:css', function() {
 //     return gulp
 //         .src(output.css + '/*.css')
@@ -187,15 +187,13 @@ gulp.task( 'minify:css', function () {
 			html: [
 				'_includes/*.html',
 				'_layouts/*.html',
-				'/blog/*.html',
-				'/info-for/*.html',
 				'*.html'
 			],
 			uncssrc: '.uncssrc'
 		} ) )
 		.pipe( plugins.cssnano( { advanced: false } ) )
 		.pipe( plugins.rename( { suffix: '.min' } ) )
-		.pipe( gulp.dest( options.build.destination ) )
+		.pipe( gulp.dest( options.css.destination ) )
 		.pipe( plugins.size({title: 'styles'}) )
 		.pipe( plugins.connect.reload() );
 });
@@ -206,7 +204,7 @@ gulp.task( 'minify:js', function () {
 		.pipe( plugins.concat('application.js') )
 		.pipe( plugins.uglify() )
 		.pipe( plugins.rename( { suffix: '.min' } ) )
-		.pipe( gulp.dest( options.build.destination ) )
+		.pipe( gulp.dest( options.js.destination ) )
 		.pipe( plugins.connect.reload() );
 });
 
