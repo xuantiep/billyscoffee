@@ -4,7 +4,8 @@ price: 24.99
 slug: Tufi
 url: "/"
 sku: 01
-image: http://d.gr-assets.com/books/1391275636l/6732019.jpg
+imageurl: http:www.billyscoffee.com.au/assets/images/product-2.jpg
+image: product-2
 weight: 20
 description: This coffee is from Tufi. It's rich and fruity, aftertaste of licorice. And stuff.
 ---

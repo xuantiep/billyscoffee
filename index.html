@@ -1,24 +1,25 @@
 ---
 layout: default
-about-headline: In love with coffee since 2004.
-about: |
-    We’re part of Cairns. And what we do with our coffee is too. With our cafes and roastery, we use our love of coffee to make a better community. So drop in if you’re around. We’d like to get to know you. And if you can't, then you should follow us on instagram ☺
 ---
 
+<header class="c-header" role="banner">
+    {% assign image = "/assets/images/billy" %}
+    {% assign absolute = true %}
+    {% include responsive-img.html %}
 
-<header class="c-header o-coverImage c-imageBlend" style="background-image: url('{{ site.assetsurl }}billy.jpg')">
-    <div class="o-container--md">
-        <div class="o-ghost">
-            <div class="o-ghost-child">
-                <h1 class="c-headline--sm u-textLeft">Welcome! Thanks for stopping by. We don’t just source, roast & brew our own coffee. Every morning, we make our place a better place.</h1>
-                <cite class="c-cite">
-                    <span>— Billy</span>
-                    (<a href="{{ site.instagram }}">@billyscoffeecairns</a>)
-                </cite>
-            </div>
-
-        </div>
-    </div>
+	<div class="c-header-wrapper">
+		<div class="o-aligner">
+			<div class="o-aligner-item">
+				<div class="o-container o-container--hero">
+					<h1 class="c-headline--sm u-textLeft">Welcome! Thanks for stopping by. We don’t just source, roast & brew our own coffee. Every morning, we make our place a better place.</h1>
+                    <cite class="c-cite">
+                        <span>— Billy</span>
+                        (<a href="{{ site.instagram }}">@billyscoffeecairns</a>)
+                    </cite>
+				</div>
+			</div>
+		</div>
+	</div>
 </header>
 
 <main class="main" aria-label="Content">
@@ -26,7 +27,7 @@ about: |
         <div class="c-block u-textCenter">
             <div class="o-container">
                 <img class="c-logo" src="{{ site.assetsurl }}billys-logo.png" alt="" />
-                <h1 class="c-headline">Come for coffee. Stay for the chat.</h1>
+                <h1 class="c-headline">Come for coffee. <span class="u-lg-lineBreak">Stay for the chat.</span></h1>
             </div>
         </div>
         <div class="c-block">
@@ -39,7 +40,7 @@ about: |
                                 <a href="https://goo.gl/maps/TNTnAM9CyH22">
                                     <strong>Billy’s Coffee</strong>
                                     Rustys Market, 57-89 Grafton St, Cairns<br>
-                                    Fri–Sun 6am–3pm
+                                    Fri–Sun, 6am–3pm
                                 </a>
                             </p>
                         </div>
@@ -51,7 +52,7 @@ about: |
                                 <a href="https://goo.gl/maps/4psBv2dPWU22">
                                     <strong>Billy’s Cafe</strong>
                                     57 Sheridan St, Cairns<br>
-                                    Fri–Sun 6am–3pm
+                                    Mon–Thurs, 6am–3pm
                                 </a>
                             </p>
                         </div>
@@ -62,8 +63,7 @@ about: |
                             <p>
                                 <a href="https://goo.gl/maps/nRLrHEVQCqS2">
                                     <strong>Billy’s Roasting</strong>
-                                    6/34 Wharf Street, Esplanade, Cairns<br>
-                                    Fri–Sun 6am–3pm
+                                    6/34 Wharf Street, Esplanade, Cairns
                                 </a>
                             </p>
                         </div>
@@ -77,10 +77,10 @@ about: |
         <div class="c-block u-textCenter">
             <div class="o-container">
                 <h1 class="c-headline">Buy Billy's <span class="u-sm-lineBreak">best blends.</span></h1>
-                <h2 class="c-headline--smSemi">Locally sourced. Fresh roasted daily.</h2>
+                <h2 class="c-headline--smSemi u-lg-spaceTD2">Locally sourced. <span class="u-sm-lineBreak">Fresh roasted daily.</span></h2>
             </div>
         </div>
-        <div class="c-block">
+        <div class="c-block c-block--products">
             <div class="o-container--super">
                 <div class="Grid Grid--withGutter Grid--alignCenter">
                     {% for product in site.products %}
@@ -95,25 +95,24 @@ about: |
         <div class="c-block">
             <div class="o-container--super">
 
-                <a href="{{ site.instagram }}" style="display: block">
-                    <div class="Grid Grid--withGutter Grid--alignCenter Grid--alignMiddle">
-                        <div class="Grid-cell u-sm-size1of3">
-                            <img src="{{ site.assetsurl }}billy-instagram.jpg" alt="" />
-                        </div>
-                        <div class="Grid-cell u-sm-size5of12 u-sm-spaceT">
-                            <p class="c-text--lg">
-                                <strong>{{ page.about-headline }}</strong>
-                                {{ page.about }}
-                            </p>
-                            <cite class="c-cite">
-                                <span>— Billy</span>
-                                (<span>@billyscoffeecairns</span>)
-                            </cite>
-
-                        </div>
+                <div class="Grid Grid--withGutter Grid--alignCenter Grid--alignMiddle">
+                    <div class="Grid-cell u-xl-size5of12 u-su-size4of12">
+                        <img class="o-fitImageCover" src="{{ site.assetsurl }}billy-instagram.jpg" alt="" />
+                    </div>
+                    <div class="Grid-cell u-xl-size6of12 u-su-size4of12 u-lg-spaceT">
+                        <p class="c-text--lg">
+                            <strong>In love with coffee since 2004.</strong>
+                            We’re part of Cairns. And what we do with our coffee is too. With our cafes and roastery, we use our love of coffee to make a better community. So drop in if you’re around. And if you can't, then you should <a class="o-linkBrand" href="{{ site.instagram }}">follow us on instagram</a> ☺.
+                        </p>
+                        <cite class="c-cite">
+                            <span>— Billy</span>
+                            (<a href="{{ site.instagram }}">@billyscoffeecairns</a>)
+                        </cite>
 
                     </div>
-                </a>
+
+                </div>
+
 
             </div>
         </div>
@@ -129,9 +128,9 @@ about: |
     <div class="c-block u-textCenter">
         <div class="o-container">
             <img class="c-logo" src="{{ site.assetsurl }}billys-logo.png" alt="" />
-            <h2 class="c-headline--sm">Billys Coffee, Cairns</h2>
+            <h2 class="c-text--lg"><strong>Billys Coffee, Cairns</strong></h2>
             <h3 class="c-headline--xsSemi">Locally sourced. Fresh roasted daily.</h3>
-            <p class="c-text--sm">© {{ 'now' | date: "%Y" }}. Site by <a href="http://www.patternworks.com.au">Patternworks.</a></p>
+            <p class="c-text--sm">Copyright {{ 'now' | date: "%Y" }}. Site by <a href="http://www.patternworks.com.au">Patternworks.</a></p>
         </div>
     </div>
 </footer>

@@ -30,7 +30,7 @@ textarea {
 
     // theme
     @include textLg();
-    border-bottom: 2px solid palette(brand);
+    border-bottom: 1px solid palette(brand);
     line-height: map-fetch($button-height, lg);
 	padding: 0 0 3px 0;
 	transition: all map-fetch($transition, duration, long) map-fetch($transition, type, base);

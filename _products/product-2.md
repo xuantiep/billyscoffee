@@ -4,7 +4,8 @@ price: 1.00
 slug: Lae
 url: "/product-url"
 sku: 02
-image: http://d.gr-assets.com/books/1391275636l/6732019.jpg
+imageurl: http:www.billyscoffee.com.au/assets/images/product-1.jpg
+image: product-1
 weight: 20
 description: This coffee is from Lae. It's strong and spicy with a steel aftertaste. And stuff.
 ---

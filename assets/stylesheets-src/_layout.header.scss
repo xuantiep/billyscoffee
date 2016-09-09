@@ -15,6 +15,10 @@
     color: palette(white);
 }
 
+.c-header-wrapper {
+    @include o-posFullScreen(absolute);
+}
+
 .c-section {
     padding: $blockSpace 0;
 }
@@ -22,6 +26,15 @@
 .c-block {
     margin-top: $blockSpace;
     &:first-of-type { margin: 0; }
+
+}
+
+.c-block--products {
+    .Grid-cell:nth-of-type(2) {
+        @include media-breakpoint-down(sm) {
+            margin-top: space(1.5);
+        }
+    }
 }
 
 .c-block-cell {
@@ -52,10 +65,15 @@
 
 // quick spacers
 
-.u-spaceT     { margin-top: space(1); }
-.u-spaceT2    { margin-top: space(2); }
-.u-spaceB     { margin-bottom: space(1); }
-.u-spaceB2    { margin-bottom: space(2); }
+.u-spaceT      { margin-top: space(1); }
+.u-spaceT2     { margin-top: space(2); }
+.u-spaceB      { margin-bottom: space(1); }
+.u-spaceB2     { margin-bottom: space(2); }
 
-.u-sm-spaceT  { @include media-breakpoint-down(sm) { margin-top: space(1); } }
-.u-sm-spaceT2 { @include media-breakpoint-down(sm) { margin-top: space(2); } }
+.u-sm-spaceT   { @include media-breakpoint-down(sm) { margin-top: space(1); } }
+.u-sm-spaceT2  { @include media-breakpoint-down(sm) { margin-top: space(2); } }
+
+.u-lg-spaceT   { @include media-breakpoint-down(lg) { margin-top: space(1); } }
+.u-lg-spaceTD2 { @include media-breakpoint-down(lg) { margin-top: space(0.5); } }
+
+.u-xl-spaceT   { @include media-breakpoint-down(xl) { margin-top: space(1); } }

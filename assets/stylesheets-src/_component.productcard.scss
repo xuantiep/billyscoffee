@@ -16,12 +16,13 @@
 	transition-property: box-shadow;
 
 	&:hover {
-		box-shadow: 0 0 space(3) palette(muted);
+		box-shadow: 0 0 space(3) palette(medium);
 	}
 }
 
 .c-product {
     @include glow();
+    cursor: pointer;
     display: block;
 
     //see below, after other styles to avoid fuckups
@@ -37,7 +38,7 @@
     @include textRg();
     background-color: palette(background);
     color: palette(brand-complement);
-    padding: space(0.6) space(1);
+    padding: space(0.6) space(1) space(0.9);
     text-transform: uppercase;
 }
 

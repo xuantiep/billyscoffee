@@ -102,12 +102,12 @@ $fontsizes: (
 		rg            : 16px
 	),
 	text: (
-		xs            : 16px,
-		sm            : $base-font-size,
+		xs            : 14px,
+		sm            : $base-font-size * 0.9,
 		rg            : $base-font-size
 	),
 	text--lg: (
-        xs            : 25px,
+        xs            : 21px,
         sm            : 32px,
         lg            : 39px
 	),
@@ -117,7 +117,7 @@ $fontsizes: (
 		lg            : 27px
 	),
 	headline--sm: (
-		xs            : 25px,
+		xs            : 21px,
 		sm            : 32px,
 		lg            : 39px
 	),

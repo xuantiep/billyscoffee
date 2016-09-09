@@ -195,6 +195,13 @@ a > strong {
 // 1. emulates text-align: center
 // --------------------------------------------------------------------------
 
+@include media-breakpoint-down(lg) {
+    span.u-lg-lineBreak {
+        display: table !important;
+        margin: auto; // 1.
+    }
+}
+
 @include media-breakpoint-down(sm) {
     span.u-sm-lineBreak {
         display: table !important;

@@ -24,7 +24,7 @@
 		}
 	}
 
-	@include media-breakpoint-up(sm) {
+	@include media-breakpoint-up(lg) {
 		padding: 0;
 	}
 }
@@ -40,7 +40,14 @@
 		@include container( container-width(xl) );
 	}
 
-	&--super {
+	&--hero {
+        @include media-breakpoint-up(sm) {
+            padding: 0 space(4);
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 0 space(2);
+        }
 	}
 
     &--super {

@@ -38,6 +38,10 @@
     font-family: "regular" !important;
     letter-spacing: 0.015em !important;
     padding: $blockSpace 0;
+
+    @include media-breakpoint-down(sm) {
+    	padding: space(1.5);
+    }
 }
 
 .snip-layout__main-container {
@@ -60,11 +64,20 @@
     //right: .417em;
     //top: .1em;
     //z-index: 2;
-    //
-    //@include media-breakpoint-up(sm) {
-    //    font-size: 1.5em;
-    //    top: .208em;
-    //}
+
+    @include media-breakpoint-down(sm) {
+        font-size: 2.5em;
+        right: .2em;
+        top: .25em;
+    }
+}
+
+// remove products
+.snip-layout .snip-product__remove {
+    @include media-breakpoint-down(sm) {
+        right: .25em;
+        top: .75em;
+    }
 }
 
 // header
@@ -95,4 +108,10 @@
 
 .snip-layout .snip-step__item.js-active {
     color: palette(brand);
+}
+
+// type
+
+.snip-layout .snip-product__name {
+    letter-spacing: 0.075em;
 }

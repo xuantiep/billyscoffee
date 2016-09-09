@@ -1,23 +1,26 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {% seo title=false %}
+    {% seo title=false %}
 
-  <title>{{ site.title }}{% if page.url != '/' %}. {{ page.title }}{% endif %}</title>
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="author", content="{{ site.author }}" >
-  <meta name="handheldfriendly", content="true" >
-  <meta name="mobileoptimized", content="320" >
+    <title>{{ site.title }}{% if page.url != '/' %}. {{ page.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="author", content="{{ site.author }}" >
+    <meta name="handheldfriendly", content="true" >
+    <meta name="mobileoptimized", content="320" >
 
-  <!-- <link rel="stylesheet" href="{{ "/assets/fonts2/stylesheet.css" | prepend: site.baseurl }}"> -->
-  <!-- <link rel="stylesheet" href="{{ "/assets/stylesheets/snipcart.css" | prepend: site.baseurl }}"> -->
-  <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="{{ "/assets/stylesheets/fonts.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/assets/stylesheets/application.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    {% include lazysize-scripts.html %}
+    {% include lazysize-styles.html %}
 
-  {% feed_meta %}
+    <!-- <link rel="stylesheet" href="{{ "/assets/fonts2/stylesheet.css" | prepend: site.baseurl }}"> -->
+    <!-- <link rel="stylesheet" href="{{ "/assets/stylesheets/snipcart.css" | prepend: site.baseurl }}"> -->
+    <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{ "/assets/stylesheets/fonts.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/stylesheets/application.css" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    {% feed_meta %}
 </head>
