@@ -30,10 +30,16 @@ textarea {
 
     // theme
     @include textLg();
-    border-bottom: 1px solid palette(brand);
+    border-bottom: 1px solid rgba( palette(brand), 0.4 );
     line-height: map-fetch($button-height, lg);
 	padding: 0 0 3px 0;
 	transition: all map-fetch($transition, duration, long) map-fetch($transition, type, base);
+
+    @include media-breakpoint-down(sm) {
+        border: 1px solid rgba( palette(brand), 0.4 );
+        border-radius: 3px;
+    	padding-left: space(0.5);
+    }
 
     // theme unused
     //border-radius: map-fetch($border-radius, base);
