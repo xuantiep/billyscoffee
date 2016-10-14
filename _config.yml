@@ -42,7 +42,6 @@ exclude:
   - node_modules
   - README.md
   - TODO.md
-  - CNAME
   - assets/*-subset
   - assets/*-src
   - assets/fonts
