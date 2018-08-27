@@ -35,7 +35,6 @@ kramdown:
 
 # Build settings
 exclude:
-  - Gemfile
   - Gemfile.lock
   - gulpfile.js
   - package.json

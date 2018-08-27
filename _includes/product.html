@@ -10,7 +10,7 @@
         data-item-weight="{{ product.weight }}"
         data-item-description="{{ product.description }}"
         >
-        <img src="{{ site.assetsurl }}{{ product.image }}.jpg" alt="{{ product.name }}" />
+        <img src="{{ product.image | prepend: site.assetsurl }}.jpg" alt="{{ product.name }}" />
         <div class="c-product-text">
             <div class="c-product-name">{{ product.name }}</div>
             <div class="c-product-description">{{ product.description }}</div>
