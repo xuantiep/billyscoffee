@@ -47,7 +47,7 @@ exclude:
   - assets/icons
 
 # Plugin settings
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
